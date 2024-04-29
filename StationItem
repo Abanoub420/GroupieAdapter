@@ -1,0 +1,32 @@
+
+
+import android.graphics.Typeface
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.metrov7.databinding.StationItemBinding
+import com.xwray.groupie.viewbinding.BindableItem
+
+class StationItem( val station : String) : BindableItem<StationItemBinding>() {
+
+
+    override fun bind(p0: StationItemBinding, p1: Int) {
+
+
+
+
+
+        p0.stationTextView.text = station    /// a single string
+
+       
+
+
+    }
+  
+    override fun getLayout(): Int {
+        return R.layout.station_item
+    }
+
+    override fun initializeViewBinding(p0: View): StationItemBinding {
+  return StationItemBinding.bind(p0)
+    }
+}
